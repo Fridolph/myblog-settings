@@ -182,8 +182,11 @@ tagcloud: false
 # Blogroll, Link exchange | 友情链接
 friends:
   Hexo: https://hexo.io
-  Yelle: https://github.com/MOxFIVE/hexo-theme-yelee
+  imooc: http://www.imooc.com/
   MOxFIVE: http://moxfive.xyz/
+  Fridolph: https://github.com/Fridolph
+  Yelle: https://github.com/MOxFIVE/hexo-theme-yelee
+
 #friends: false
 
 #是否开启“关于我”。
