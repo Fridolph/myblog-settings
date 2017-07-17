@@ -30,28 +30,48 @@ date: 2017-06-15 16:28:43
 
 ps 标题只是大气和激励自己…  学海无涯，看官一笑
 
+注：以下我例举的图书都已购物正版纸质或电子书，若是读完的书会写自己的书评，没读完的简历放的都是官方的…… （以此来监督自己的学习）
+
 [更多细节请移步我的Github仓库](https://github.com/Fridolph/my-books)
 
-## 近期购买|阅读 (最近3本)
+## 近期购买 | 阅读 | 推荐 (排名不分先后)
 
 <div class="library">
   <div class="book-wrapper">
     <div class="book-title">《深入理解ES6》</div>
     <div class="book-author">Nicholas C. Zakas / 2017-7</div>
     <div class="book-img"><img alt="深入理解ES6" src="https://img1.doubanio.com/lpic/s29478358.jpg" /></div>
-    <div class="book-desc">一本不错的书，高级程序设计的作者所写，不过这是预售，还没到手开看啦，啊哈哈</div>
+    <div class="book-desc">高级程序设计的作者所写预售，7月10号拿到手了300多页，放着慢慢看了… 看目录非常不错，书本质量挺好，深入ES6推荐入手。</div>
+  </div>  
+  <div class="book-wrapper">
+    <div class="book-title">《现代前端技术解析》</div>
+    <div class="book-author">张成文 / 2017-4</div>
+    <div class="book-img"><img alt="现代前端技术解析" src="https://img1.doubanio.com/lpic/s29428008.jpg" /></div>
+    <div class="book-desc">对于我来说，今年最好的一本书没有之一，无论是对视野、面试、广度等都很具有参考性，当然深度的话还是得靠实践项目慢慢积累。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《Web API的设计与开发》</div>
+    <div class="book-author">水野贵明 / 2017-5</div>
+    <div class="book-img"><img alt="WebAPI的设计与开发" src="http://file.ituring.com.cn/SmallCover/1705413f5c52cffff0ce" /></div>
+    <div class="book-desc">本书不仅适合在工作中需要设计、开发或修改Web API的技术人员阅读，对想了解技术细节的产品经理、运维人员而言，也有一定的参考价值。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《Web安全开发指南》</div>
+    <div class="book-author">John Paul Mueller / 2017-7</div>
+    <div class="book-img"><img alt="Web安全开发指南" src="http://file.ituring.com.cn/SmallCover/1705ed516d8cc2bafd33" /></div>
+    <div class="book-desc">详细介绍了Web安全开发的必备知识，旨在让前端开发相关人士了解新形势下的安全技能，涉及从最新的智能手机到老旧的台式计算机等各种设备，并且不限定平台</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《前端架构设计》</div>
+    <div class="book-author">Micah Godbolt / 2017-4</div>
+    <div class="book-img"><img alt="前端架构设计" src="http://file.ituring.com.cn/SmallCover/01006227398faf4a1a1d" /></div>
+    <div class="book-desc">作者结合自己在Red Hat公司的项目实战经历，探讨了前端架构原则和前端架构的核心内容，包括工作流程、测试流程和文档记录，以及作为前端架构师所要承担的具体开发工作</div>
   </div>
   <div class="book-wrapper">
     <div class="book-title">《CSS核心技术详解》</div>
     <div class="book-author">肖志华 / 2017-6</div>
     <div class="book-img"><img alt="CSS核心技术详解" src="https://img3.doubanio.com/lpic/s29459174.jpg" /></div>
-    <div class="book-desc">《CSS核心技术详解》内容精练、实例丰富、通俗易懂，可作为广大CSS设计人员和前端开发人员的参考书。</div>
-  </div>
-  <div class="book-wrapper">
-    <div class="book-title">《现代前端技术解析》</div>
-    <div class="book-author">张成文 / 2017-4</div>
-    <div class="book-img"><img alt="现代前端技术解析" src="https://img1.doubanio.com/lpic/s29428008.jpg" /></div>
-    <div class="book-desc">这是一本以现代前端技术思想与理论为主要内容的书。前端技术发展迅速，涉及的技术点很多，我们往往需要阅读很多书籍才能理解前端技术的知识体系。</div>
+    <div class="book-desc">怎么说呢，读完没学到什么干货，当然亮点和不知道的知识也有，例子太随意且深度不够，300页2天读完不如去阅读张鑫旭老师的博客。</div>
   </div>
 </div>
 
@@ -241,6 +261,24 @@ ps 标题只是大气和激励自己…  学海无涯，看官一笑
     <div class="book-author">张成文 / 2017-4</div>
     <div class="book-img"><img alt="现代前端技术解析" src="https://img1.doubanio.com/lpic/s29428008.jpg" /></div>
     <div class="book-desc">这是一本以现代前端技术思想与理论为主要内容的书。前端技术发展迅速，涉及的技术点很多，我们往往需要阅读很多书籍才能理解前端技术的知识体系。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《Web API的设计与开发》</div>
+    <div class="book-author">水野贵明 / 2017-5</div>
+    <div class="book-img"><img alt="WebAPI的设计与开发" src="http://file.ituring.com.cn/SmallCover/1705413f5c52cffff0ce" /></div>
+    <div class="book-desc">本书不仅适合在工作中需要设计、开发或修改Web API的技术人员阅读，对想了解技术细节的产品经理、运维人员而言，也有一定的参考价值。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《Web安全开发指南》</div>
+    <div class="book-author">John Paul Mueller / 2017-7</div>
+    <div class="book-img"><img alt="Web安全开发指南" src="http://file.ituring.com.cn/SmallCover/1705ed516d8cc2bafd33" /></div>
+    <div class="book-desc">详细介绍了Web安全开发的必备知识，旨在让前端开发相关人士了解新形势下的安全技能，涉及从最新的智能手机到老旧的台式计算机等各种设备，并且不限定平台</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《前端架构设计》</div>
+    <div class="book-author">Micah Godbolt / 2017-4</div>
+    <div class="book-img"><img alt="前端架构设计" src="http://file.ituring.com.cn/SmallCover/01006227398faf4a1a1d" /></div>
+    <div class="book-desc">作者结合自己在Red Hat公司的项目实战经历，探讨了前端架构原则和前端架构的核心内容，包括工作流程、测试流程和文档记录，以及作为前端架构师所要承担的具体开发工作</div>
   </div>
   <div class="book-wrapper">
     <div class="book-title">《MySQL必知必会》</div>
