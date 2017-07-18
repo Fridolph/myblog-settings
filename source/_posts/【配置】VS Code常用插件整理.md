@@ -16,7 +16,12 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 
 而插件和调试上来说，简直不要太爽，这里整理和备份下常用的插件，方便每次换电脑时操作，虽然心里都记得清楚了… 换两次电脑，搭两次环境简直不要太爽…
 
-如果你有更好的推荐，请在下方留言~ 一起分享，谢谢
+
+2017年7月10号 …网上找到了 [VSCode拓展插件推荐](https://github.com/varHarrie/Dawn-Blossoms/issues/10)（HTML、Node、Vue、React开发均适用）于是参考这个就好了~  
+
+好不容易码了这么多字，这篇继续更新完吧
+
+---
 
 ## 通用配置插件
 
@@ -41,6 +46,8 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 `filesize`
   在底部状态栏显示当前文件大小，点击后还可以看到详细创建、修改时间，效果如下，相信你会喜欢的
 
+`Version Lens`
+  package.json文件显示模块当前版本和最新版本
 
 ## 项目及规范相关
 
@@ -53,17 +60,11 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 `Project Manager`
   在多个项目之前快速切换的工具
 
-
-## 辅助工具类
-
-`Atuo Close Tag`
-  自动关闭 html 标签
-
-`Atuo Rename Tag`
-  修改 html 标签，自动帮你完成尾部闭合标签的同步修改
-
 `Easy Less`
   保存less后自动编译成css。同名的还有Easy Sass 自动编译，考拉什么的可以丢啦（命令行什么的虽然高大上但其实还是折腾啊）
+
+`Better Comments`
+  编写更加人性化的注释，具体是怎么试了你就知道了
 
 ## 前端开发通用插件
 
@@ -82,7 +83,7 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 `Can I Use`
   前端都懂的吧？ 写高级特性先查查，免得返工。升级了，现在鼠标指到该属性就可显示兼容了，非常nice
 
-`HTML-Less-Class-Completion`
+`HTML Less Class Completion`
   写多了就喜欢这些偷懒的插件，其实想变厉害就应该手敲（~误）
 
 `Open in browswer`
@@ -99,5 +100,45 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 
 `React-Redux ES6 Snippets`
   有点恐怖… 说真的，效率是快了… 为了装逼我选择放弃
+
+
+## 辅助工具类
+
+`Auto Close Tag`
+  自动关闭 html 标签
+
+`Auto Rename Tag`
+  修改 html 标签，自动帮你完成尾部闭合标签的同步修改
+
+`Code Runner`
+  运行选中代码段（支持Node）
+
+`Code Spellchecker`
+  单词拼写检查（对于英语渣来说很需要啊）
+
+`CodeBing`
+  在VSCode中弹出浏览器并搜索，可编辑搜索引擎（节约了点开浏览器的步骤省下几十秒呢）
+
+`Color Highlight`
+  颜色值在代码中高亮显示（我没装这个，新版自带了吧）
+
+`Color Picker`
+  拾色器（不过我一直用的qq截图里的颜色…… 哈哈哈）
+
+`Emoji`
+  在代码中输入emoji
+
+`File Peek`
+  根据路径字符串，快速定位到文件
+
+`Code Outline`
+  展示代码结构树
+
+`Output Colorizer`
+  彩色输出信息
+
+`Partial Diff`
+  对比两段代码或文件
+
 
 至于其他工具类，需要什么搜什么吧，完！
