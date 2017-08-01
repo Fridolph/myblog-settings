@@ -129,16 +129,22 @@ ps 标题只是大气和激励自己…  学海无涯，看官一笑
     <div class="book-desc">JavaScript语言非常重要，相关的技术图书也很多，但没有任何一本书对JavaScript语言的重要部分（函数、闭包和原型）进行深入、全面的介绍，也没有任何一本书讲述跨浏览器代码的编写。本书是jQuery库创始人编写的一本深入剖析JavaScript语言的书</div>
   </div>
   <div class="book-wrapper">
-    <div class="book-title">《JavaScript权威指南(第6版)》</div>
-    <div class="book-author">David Flanagan / 淘宝前端 / 2012-4</div>
-    <div class="book-img"><img alt="JavaScript权威指南(第6版)" src="https://img3.doubanio.com/lpic/s8958854.jpg" /></div>
-    <div class="book-desc">本书是程序员学习核心JavaScript语言和由Web浏览器定义的JavaScript API的指南和综合参考手册，工具书，有时间耐心可以慢慢读，不过我买来一直压箱底了……惭愧。</div>
-  </div>
+    <div class="book-title">《JavaScript学习指南》(第三版)</div>
+    <div class="book-author">Ethan Brown / 2017-7</div>
+    <div class="book-img"><img alt="JavaScript学习指南" src="https://img1.doubanio.com/mpic/s6633627.jpg" /></div>
+    <div class="book-desc">和犀牛书封面一样，不过页数少一半多，最新的有讲到ES6相关的介绍，其实JS类进阶书都大同小异，关键是我们要把这些点都一一克服、理解，如果像我一样读不下去犀牛书的可以读读这本，效果挺好</div>
+  </div>  
   <div class="book-wrapper">
     <div class="book-title">《JavaScript DOM编程艺术 （第2版）》</div>
     <div class="book-author">Jeremy Keith / Jeffrey Sambells / 2011-4</div>
     <div class="book-img"><img alt="JavaScript DOM编程艺术 （第2版）" src="https://img3.doubanio.com/lpic/s4677623.jpg" /></div>
     <div class="book-desc">JavaScript是Web开发中最重要的一门语言，它强大而优美。无论是桌面开发，还是移动应用。JavaScript都是必须掌握的技术。W3C的DOM标准是开发Web应用的基石。已经得到所有现代浏览器的支持，这使得跨平台Web开发成了一件轻松惬意的事。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《JavaScript权威指南(第6版)》</div>
+    <div class="book-author">David Flanagan / 淘宝前端 / 2012-4</div>
+    <div class="book-img"><img alt="JavaScript权威指南(第6版)" src="https://img3.doubanio.com/lpic/s8958854.jpg" /></div>
+    <div class="book-desc">本书是程序员学习核心JavaScript语言和由Web浏览器定义的JavaScript API的指南和综合参考手册，工具书，有时间耐心可以慢慢读，不过我买来一直压箱底了……惭愧。</div>
   </div>  
 </div>
 
@@ -220,6 +226,12 @@ ps 标题只是大气和激励自己…  学海无涯，看官一笑
     <div class="book-author">Lea Verou / 2016-4</div>
     <div class="book-img"><img alt="CSS揭秘" src="https://img1.doubanio.com/lpic/s28659699.jpg" /></div>
     <div class="book-desc">本书是一本注重实践的教程，作者为我们揭示了 47 个鲜为人知的 CSS 技巧，主要内容包括背景与边框、形状、 视觉效果、字体排印、用户体验、结构与布局、过渡与动画等。本书将带领读者循序渐进地探寻更优雅的解决方案，攻克每天都会遇到的各种网页样式难题。</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《HTML5基础知识、核心技术与前沿案例》</div>
+    <div class="book-author">刘欢 / 2016-10</div>
+    <div class="book-img"><img alt="HTML5基础知识、核心技术与前沿案例" src="https://img1.doubanio.com/lpic/s29137878.jpg" /></div>
+    <div class="book-desc">《HTML5基础知识、核心技术与前沿案例 》是一本引导初、中级学习者深入了解并有效掌握HTML5核心技巧的技术实战书籍，全书采用“基础知识+案例驱动”的双轨模式，精心安排了大量经典的HTML5设计实战案例。</div>
   </div>
   <div class="book-wrapper">
     <div class="book-title">《CSS核心技术详解》</div>
@@ -320,6 +332,12 @@ ps 标题只是大气和激励自己…  学海无涯，看官一笑
     <div class="book-author">苏杰 / 2010-4</div>
     <div class="book-img"><img alt="人人都是产品经理" src="https://img1.doubanio.com/lpic/s4241529.jpg" /></div>
     <div class="book-desc">产品入门书，这类适合当小说感，带着轻松愉快的心情，好了，一两晚估计就翻完了，然后呢？ Get到产品技能……（并不会）</div>
+  </div>
+  <div class="book-wrapper">
+    <div class="book-title">《人人都是设计师》</div>
+    <div class="book-author">Rebecca Hagen / Kim Golombisky / 2016-9</div>
+    <div class="book-img"><img alt="人人都是产品经理" src="https://img3.doubanio.com/lpic/s28990046.jpg" /></div>
+    <div class="book-desc">本书是一本为没有艺术背景的普通人所写的平面设计指导书，作者通过图文并茂的典型案例讲解了设计的主要原则和规则，主要内容有：什么是设计，设计前的调查研究和头脑风暴，设计的元素和原理，版式的有效原则和13条规则，为什么需要网格，布局、字体和色彩的选用原则，如何使用照片、插图和信息图，多媒体组件，网页的输出和印刷输出等。</div>
   </div>
   <div class="book-wrapper">
     <div class="book-title">《设计师要懂心理学》</div>
