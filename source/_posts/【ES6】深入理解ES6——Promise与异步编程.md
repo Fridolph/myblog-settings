@@ -1,5 +1,5 @@
 ---
-title: 【ES6】深入理解ES6——JavaScript中的类
+title: 【ES6】深入理解ES6——Promise与异步编程
 date: 2017-08-12 23:41:03
 tags: 
   - ES6
