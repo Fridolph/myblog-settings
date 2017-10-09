@@ -20,7 +20,6 @@ categories:
     <!-- 代码 -->
   </div>
 </template>
-
 <script>
 // 导入html2canvas
 require('html2canvas/html2canvas.min');
@@ -63,11 +62,9 @@ export default {
     <!-- 代码 -->
   </div>
 </template>
-
 <script>
 // 使用前需要 npm install file-saver --save-dev
 import fileSaver from 'file-saver';
-
 export default {
   data() {
     return {}
@@ -102,7 +99,6 @@ export default {
         <\/body>
         <\/html>
       `;
-
       // 最后保存文件
       let blob = new Blob([html], {type: 'text/html; charset=utf-8'});
       // 这个文件会自动下载到浏览器设定的下载目录下
