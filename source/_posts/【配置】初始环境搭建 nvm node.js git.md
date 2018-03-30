@@ -1,5 +1,5 @@
 ---
-title: 【配置】如果我买了一台新电脑
+title: 【配置】初始环境搭建 nvm node.js git
 date: 2017-07-15 9:40:50
 tags: 
   - 装机
