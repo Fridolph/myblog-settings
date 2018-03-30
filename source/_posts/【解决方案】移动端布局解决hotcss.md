@@ -71,13 +71,13 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
     └── px2rem.styl
 ```
 
+---
 
 ```js
 ;(function(widnow, document) {
   'use strict';
   // 给hotcss开辟个命名空间，暴露给外部访问
   var hotcss = {}
-
   ;(function() {
     // 根据devicePixelRatio自定计算scale
     // 可以有效解决移动端1px问题
@@ -85,11 +85,9 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
       hotcssEl = document.querySelector('meta[name="hotcss"]'),
       dpr = window.devicePixelRatio || 1, // 默认给1
       maxWidth = 540,  // 这个最大宽度是可以手动调整的，表示我们支持的最大宽度
-      designWidth = 0  // 该值最终为设计稿宽度 比如 ip5 320 实际计算得 640
-    
+      designWidth = 0  // 该值最终为设计稿宽度 比如 ip5 320 实际计算得 640    
     // 这里有点绕，一句话说就是，dpr超过3的按3算，2-3之间按2算，1-2之间按1算
     dpr = dpr >= 3 ? 3 : (dpr >= 2 ? 2 : 1)
-
     // 允许通过自定义name为hotcss的meta头，通过initial-dpr来强制页面缩放
     if (hotcssEl) {
       var hotcssCon = hotcssEl.getAttribute('content') // 拿meta的content
@@ -113,7 +111,6 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
         }
       }
     }
-
     // 给html设置 data-dpr属性
     document.documentElement.setAttribute('data-dpr', dpr)
     // 同时为hotcss对象 添加属性 dpr
@@ -121,17 +118,14 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
     // 同上
     document.documentElement.setAttribute('max-width', maxWidth)
     hotcss.maxWidth = maxWidth
-
     if (designWidth) {
       document.documentElement.setAttribute('design-width', designWidth)
     }
     // 保证 px2rem 和 rem2px 不传第二个参数时，获取 hotcss.desgnWidth 是 undefined导致的NaN
     hotcss.designWidth = designWidth
-
     var scale = 1 / dpr,
       // 注：我觉得麻烦就改成es6写法了，作者为兼容性用的 + 来拼接，这段大家写viewport都很熟悉吧
       content = `width=device-width, initial-scale=${scale}, minimum-scale=${scale}, maximum-scale=${scale}, user-scalable=no`
-
     // 容错处理，如果没写viewport作者大大很和善地帮加上了
     if (viewportEl) {
       viewportEl.setAttribute('content', content)
@@ -142,7 +136,6 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
       document.head.appendChild(viewportEl)
     }
   })()
-
   // 其实到这里为止还没开始重头戏，前戏为，我们将 html文档设置了需要的前置属性
   // meta-dpr max-width design-width 通过这3个值就能进行以下的适配工作了
   hotcss.px2rem = function(px, designWidth) {
@@ -155,7 +148,6 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
     // 按320宽 与 设计图比例 进行 20份等比分配
     return parseInt(px, 10) * 320 / designWidth / 20
   }
-
   hotcss.rem2px = function(rem, designWidth) {
     // 新增一个rem2px的方法，用法和 px2rem 一致
     if (!designWidth) {
@@ -165,7 +157,6 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
     // rem是 以320标准和设计图尺寸比 除以20份 得到的，这里反过来求得 px
     return rem * 20 * designWidth / 320
   }
-
   // 核心方法，给html 设置 font-size, 因为 rem是基于 根元素的fontsize
   hotcss.mresize = function() {
     // getBoundingClientRect()有少数兼容性问题
@@ -183,29 +174,23 @@ $designWidth必须要在使用px2rem前定义。否则scss编译会出错。
     // 有回调则执行回调
     hotcss.callback && hotcss.callback()
   }
-
   // 先直接调用一次，调用后， html根元素被设置了：
   // data-dpr、max-width、design-width、font-size
   hotcss.mresize() 
-
   // 接下来的 即函数节流了，用于性能优化
   window.addEventListener('resize', function() {
     clearTimeout(hotcss.tid)
     // 这个时间可按实际需求更改
     hotcss.tid = setTimeout(hotcss.mresize, 33)
   }, false)
-
   // 这里可理解为初始化，load后先执行一次
   window.addEventListener('load', hotcss.mresize, false) 
-
   setTimeout(function() {
     hotcss.mresize()
     // 这里作者为保险又调用了一次，真是小心谨慎啊
   }, 333)
-
   window.hotcss = hotcss
   // 命名空间暴露出来，控制权也暴露了，需要时可手动调用以处理某些特别需求
-
 })(window, document)
 ```
 

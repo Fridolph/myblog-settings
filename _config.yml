@@ -72,3 +72,4 @@ deploy:
   type: git
   repo: https://github.com/Fridolph/Fridolph.github.io.git
   branch: master
+  user: 249121486@qq.com

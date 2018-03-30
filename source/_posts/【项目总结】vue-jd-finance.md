@@ -18,17 +18,17 @@ categories:
 
 在实战过程中，提出了很多问题，这个也是我想写博客的原因，问题的回答也是自己慢慢摸索进行了总结
 
-![](../img/jd-finance/1.png)
+![](/img/jd-finance/1.png)
 
-![](../img/jd-finance/2.png)
+![](/img/jd-finance/2.png)
 
-![](../img/jd-finance/3.png)
+![](/img/jd-finance/3.png)
 
-![](../img/jd-finance/4.png)
+![](/img/jd-finance/4.png)
 
-![](../img/jd-finance/5.png)
+![](/img/jd-finance/5.png)
 
-![](../img/jd-finance/6.png)
+![](/img/jd-finance/6.png)
 
 ## 需求分析
 
