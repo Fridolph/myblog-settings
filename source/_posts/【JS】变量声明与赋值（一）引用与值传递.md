@@ -145,7 +145,7 @@ console.log(numbers[4])
 
 我们可以参考如下图片理解这种机制，每个变量标识符都会关联某个存放变量实际值的物理地址；所谓只读的变量即是该变量标识符不可以被重新赋值，而该变量指向的值还是可变的。
 
-<img src="/img/zhuanzai/bianliang.png" />
+<img src="http://blog.fueson.top/img/2017/%E5%8F%98%E9%87%8F.png" />
 
 JavaScript 中存在着所谓的原始类型与复合类型，使用 const 声明的原始类型是值不可变的：
 

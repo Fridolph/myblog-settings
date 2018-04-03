@@ -210,7 +210,7 @@ list.render()
 
 原有系统的依赖关系图结果如下：
 
-<img src="/img/design/原有关系依赖图.jpg" />
+<img src="http://blog.fueson.top/img/2017/%E5%8E%9F%E6%9C%89%E5%85%B3%E7%B3%BB%E4%BE%9D%E8%B5%96%E5%9B%BE.jpg" />
 
 基于新的依赖架构，List模块具备了设置不同数据加载逻辑的能力，现在我们可以复用List模块再实现列表B的数据加载逻辑并在main中组装即可完成列表B的功能：
 
@@ -234,7 +234,7 @@ listB.render()
 
 最终的一个依赖关系图如下：
 
-<img src="/img/design/最终依赖关系图.jpg" />
+<img src="http://blog.fueson.top/img/2017/%E6%9C%80%E7%BB%88%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E5%9B%BE.jpg" />
 
 至此我们上面演示了应用 IoC 理念对高层模块的一个依赖架构改造，提高了高层模块的可复用性。
 

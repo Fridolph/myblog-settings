@@ -47,7 +47,7 @@ btn.onclick = function() {
 }
 ```
 
-![出错](/img/jsonp/err.jpg)
+![出错](http://blog.fueson.top/img/2017/jsonp_err.jpg)
 
 但`<img>`的src（获取图片），`<link>`的href（获取css），`<script>`的src（获取javascript）这三个都不符合同源策略，它们可以跨域获取数据。这里要介绍的JSONP就是利用`<script>`的src来实现跨域获取数据的。
 
