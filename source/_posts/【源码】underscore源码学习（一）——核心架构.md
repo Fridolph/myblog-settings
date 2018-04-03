@@ -193,8 +193,8 @@ xxx && xxx 这样的语句其实有断句，首先 typeof exports != 'undefinded
 
 参考 高级程序设计198页
 
-![活动对象1](/source/img/underscore/01.png)
-![活动对象2](/source/img/underscore/02.png)
+![活动对象1](http://blog.fueson.top/img/2017/underscore02.png)
+![活动对象2](http://blog.fueson.top/img/2017/underscore01.png)
 
 `optimizeCb`若执行，所传参数，都将作为optimizeCb内部的活动对象，函数执行完毕所返回的匿名函数是一个闭包，它能访问到当前活动对象上的参数，即函数传参。
 

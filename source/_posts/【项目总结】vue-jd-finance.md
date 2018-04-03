@@ -18,17 +18,17 @@ categories:
 
 在实战过程中，提出了很多问题，这个也是我想写博客的原因，问题的回答也是自己慢慢摸索进行了总结
 
-![](/img/jd-finance/1.png)
+![](http://blog.fueson.top/img/2017/jd01.png)
 
-![](/img/jd-finance/2.png)
+![](http://blog.fueson.top/img/2017/jd02.png)
 
-![](/img/jd-finance/3.png)
+![](http://blog.fueson.top/img/2017/jd03.png)
 
-![](/img/jd-finance/4.png)
+![](http://blog.fueson.top/img/2017/jd04.png)
 
-![](/img/jd-finance/5.png)
+![](http://blog.fueson.top/img/2017/jd05.png)
 
-![](/img/jd-finance/6.png)
+![](http://blog.fueson.top/img/2017/jd06.png)
 
 ## 需求分析
 

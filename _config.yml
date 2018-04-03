@@ -4,9 +4,8 @@
 
 # Site
 title: 霪霖笙箫的博客
-subtitle: 前端工程师，二次元控，爱音乐，摄影爱好者，电竞解说
-
-description: 欢迎访问霪霖笙箫的个人主页&技术博客
+subtitle: 欢迎访问霪霖笙箫的博客! 国服大前端，努力攒经验中… 动漫控，摄影迷，爱音乐、羽毛球、斯诺克，请多指教 ^_^
+# description: 欢迎访问霪霖笙箫的博客
 author: Fridolph
 language:
 timezone:
@@ -64,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yelee
+theme: delody
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
