@@ -8,7 +8,8 @@ categories:
   - webpack
 ---
 
-> 正好离webpack4的升级也过了一个多月了，大佬们已经踩完第一波雷，官方也强推现在的稳定版本4.5，加上最近在看服务端渲染，正好弄个demo升级玩玩
+> 正好离webpack4的升级也过了一个多月了，大佬们已经踩完第一波雷，官方也强推现在的稳定版本4.5，加上最近在看服务端渲染，正好弄个demo升级玩玩。内容大部分转自 webpack4升级完全指南 https://segmentfault.com/a/1190000014247030
+
 
 <!-- more -->
 
@@ -226,8 +227,6 @@ module.exports = {
 ```
 
 ## 参考资料
-
-感谢 webpack4升级完全指南 https://segmentfault.com/a/1190000014247030
 
 webpack4更新日志 https://github.com/webpack/webpack/releases/tag/v4.0.0
 
