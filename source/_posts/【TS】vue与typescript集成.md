@@ -18,7 +18,7 @@ categories:
 转自[Vue-TypeScript-DpApp-Demo](https://segmentfault.com/a/1190000012486378)
 [Vue + TypeScript 新项目起手式](https://juejin.im/post/59f29d28518825549f7260b6)
 
----
+<!-- more -->
 
 ## Vue与TypeScript集成相关配置
 
