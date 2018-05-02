@@ -67,7 +67,7 @@ theme: melody
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
+deploy: 
   type: git
   repo: https://github.com/Fridolph/Fridolph.github.io.git
   branch: master
