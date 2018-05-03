@@ -8,8 +8,8 @@ sidebar:
   have_read: 你已经读了
 
 footer:
-  driven: 驱动
-  theme: 主题
+  driven: driven
+  theme: theme
 
 copy:
   success: 复制成功
