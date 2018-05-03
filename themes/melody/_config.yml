@@ -5,11 +5,11 @@ language:
 # Main menu navigation
 # ---------------
 menu:
-  Home: /
-  Archives: /我的文章
-  Books: /图书推荐
-  Demo: /项目预览
-  gallery: /个人相册
+  个人主页: /
+  文章总览: /archives
+  图书推荐: /books
+  项目实战: /demo
+  个人相册: /gallery
 
   # Tags: /tags
   # Categories: /categories
@@ -123,8 +123,8 @@ toc:
 
 heart:
   enable: true
-  href: https://github.com/Molunerfinn/hexo-theme-melody
-  text: 感谢对melody的支持，若喜欢请star ^_^
+  href: https://github.com/fridolph
+  text: 感谢访问本站，若喜欢请star ^_^
 
 post_copyright:
   enable: true
