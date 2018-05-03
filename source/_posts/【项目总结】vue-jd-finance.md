@@ -1,10 +1,10 @@
 ---
 title: 【项目总结】vue-jd-finance
 date: 2018-03-15 21:41:03
-tags: 
+tags:
   - 总结
   - 实战
-categories: 
+categories:
   - 总结
 ---
 
@@ -120,11 +120,11 @@ css里的 1px px就是css像素了，和逻辑单位一致。
 * 提交 使用git提交代码 管理线上版本
 * 部署 从git仓库拉取代码，通过小流量、跨机房、全量部署
 * 开启Gzip 开启gzip压缩
-* 更新CDN 
+* 更新CDN
 
 ### 构建工具
 
-* babel 
+* babel
 * webpack
 * dev-server
 
@@ -140,12 +140,12 @@ mac https://github.com/creationix/nvm#install-script
 
 **构建环境相关**
 
-webpack 4.10.0  
+webpack 4.10.0
 https://doc.webpack-china.org
 
-npm scripts  
+npm scripts
 http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html
 
-babel 
+babel
 https://babeljs.cn/docs/usage/polyfill
 https://www.imooc.com/article/21866
