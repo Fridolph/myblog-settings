@@ -1,9 +1,9 @@
 ---
 title: 【配置】VS Code常用插件整理
 date: 2017-02-20 09:51:45
-tags: 
+tags:
   - vscode
-categories: 
+categories:
   - 配置
 ---
 
@@ -14,275 +14,165 @@ Visual Studio Code是个牛逼的编辑器，启动非常快，我已经抛弃We
 
 <!-- more -->
 
-# 前言
-
-而插件和调试上来说，简直不要太爽，这里整理和备份下常用的插件，方便每次换电脑时操作，虽然心里都记得清楚了… 换两次电脑，搭两次环境简直不要太爽…
-
-2017年7月10号 …网上找到了 [VSCode拓展插件推荐](https://github.com/shenzekun/shenzekun.github.io/issues/1)（HTML、Node、Vue、React开发均适用）于是参考这个就好了~
-
-好不容易码了这么多字，这篇继续更新完吧
+> 2018年4月更新，转自掘金，作者王仕军。大部分转自这里，不过也有我自己插件，并一起整理进来。
 
 ---
 
-## 常用插件
-
-### Auto Close Tag
-
-自动添加HTML / XML关闭标签（必备）
-
-### Auto Rename Tag
-
-自动重命名配对的HTML / XML标签(必备)
-
-
-
-
-
-### Beautify
-
-格式化javascript，JSON，CSS，Sass，和HTML
-
-
-
-### Bootstrap 4 & Font awesome snippets
-
-包含Bootstrap 4＆Font awesome 的代码片段
-
-
-
-### Bracket Pair Colorizer
-
-颜色识别匹配括号
-
-
-
-### Class autocomplete for HTML
-
-智能提示HTML class =“”属性（必备）
-
-C### ode Runner
-
-非常强大的一款插件，能够运行多种语言的代码片段或代码文件：C，C ++，Java，JavaScript，PHP，Python，Perl，Ruby，Go等等，安装完成后，右上角出现：
-
-点击这个按钮就可以运行你的文件了（必备）
-
-
-
-### css peek
-
-能够查看CSS ID和类的字符串作为HTML文件中相应的CSS定义（必备）
-
-使用方法：将光标放在class里面的属性，右击
-
-
-### Dash
-
-查文档必备，搭配 dash（不过似乎只有 mac 版） :grin:
-
-快捷键 ctrl + h 它根据你当前选中的语言查找 dash 里面的文档
-
-
-
-### Debugger for Chrome
-
-让 vscode 映射 chrome 的 debug功能，使静态页面都可以用 vscode 来打断点调试
-
-简单使用：戳我
-
-### Document This
-
-添加注释块
-
-
-
-设置：
-
- "docthis.includeAuthorTag": true,//出现@Author
- "docthis.includeDescriptionTag": true,//出现@Description
- "docthis.authorName": "shenzekun",//作者名字
-快捷键： 按两次Ctrl+alt+d
-
-### ESLint
-
-EsLint可以帮助我们检查Javascript编程时的语法错误。比如：在Javascript应用中，你很难找到你漏泄的变量或者方法。EsLint能够帮助我们分析JS代码，找到bug并确保一定程度的JS语法书写的正确性。
-
-配置：戳我
-
-### Font-awesome codes for html
-
-用于 html 的Font-awesome代码片段
-
-### filesize
-
-在底部状态栏显示当前文件大小，点击后还可以看到详细创建、修改时间
-
-
-
-### Git History
-
-以图表的形式查看git日志
-
-
-使用 command+shift+p（Ctrl+shift+p） 输入git log就可以看到了
-
-### Git Lens
-
-git 日志插件
-
-
-
-### HTML CSS Support
-
-在 html 标签上写class 智能提示当前项目所支持的样式（必备）
-
-### HTML Snippets
-
-html 代码片段（必备）
-
-### htmlhint
-
-html代码检测
-
-
-
-### htmltagwrap
-
-可以在选中HTML标签中外面套一层标签
-
-
-
-使用：选择一大段代码，然后按“Alt + W”
-
-### Indenticator
-
-突出目前的缩进深度
-
-
-
-### IntelliSense for CSS class names
-
-智能提示 css 的 class 名
-
-### JavaScript (ES6) code snippets
-
-es6代码片段（必备）
-
-
-
-### JavaScript Snippet Pack
-
-js代码片段（必备）
-
-### jQuery Code Snippets
-
-jQuery 代码片段
-
-### Live Sass Compiler
-
-实时编译 sass ,不过需要配置，附上我的配置
-
-"liveSassCompile.settings.formats":[
-        // You can add more
-        {
-            "format": "compressed",//压缩
-            "extensionName": ".min.css",//编译后缀名
-            "savePath": "./css"//编译保存的路径
-        }
-    ],
-使用
-
-
-
-### markdownlint
-
-markdown 语法检查
-
-### Node.js Modules Intellisense
-
-可以在导入语句中自动完成JavaScript / TypeScript模块。
-
-
-
-### npm Intellisense
-
-在导入语句中自动填充npm模块,跟Node.js Modules Intellisense差不多
-
-### open in browser
-
-当前的 html 文件用浏览器打开，类似 webstorm 的那四个小浏览器图标功能，前提条件html 文件必须保存
-
-快捷键alt+b
-
-### Output Colorizer
-
-输出提示的文字颜色有一些变化，方便获取关键信息
-
-
-### Path Intellisense
-路径自动补全（必备）
-
-### Prettier
-格式化JavaScript / TypeScript / CSS 。
-
-### Project Manager
-工程项目过多时，shift+cmd+p(shift+ctrl+p) 然后输入project，第一次选择edit Project编辑自己的工程项目，之后就可以直接选择open打开你的项目
-
-### Sass
-写 sass 必备
-
-### vscode-faker
-生成假数据，地址，电话，图片等等
-
-
-打开方式shift+cmd+p(shift+ctrl+p)) 然后输入faker 就可以选择了
-
-### Quokka.js
-实时观看 javascript 的变量的变化
-
-
-
-使用：先shift+cmd+p （ctrl+shift+p）输入 quokka 选择 new javascript 就行了 :grinning:
-
-### Regex Previewer
-测试正则的插件
-
-
-
-### TSLint
-检查typescript编程时的语法错误语法
-
-### TypeScript Importer
-自动搜索工作区文件中的TypeScript定义，并将所有已知符号作为完成项，以允许代码完成。
-
-
-
-### vscode-icons
-目录树图标
-
-r### eact
-React-Native/React/Redux snippets for es6/es7
-react代码片段，下载人数超多 :wink:
-
-
-
-### react-beautify
-格式化 javascript, JSX, typescript, TSX 文件
-
-### vue
-vetur
-语法高亮、智能感知
-
-V### ueHelper
-vue代码片段
-
-### Vue TypeScript Snippets
-vue的 typescript 代码片段
-
-### Vue 2 Snippets
-vue 2代码片段
-
-### One Dark Pro
-这个也好看 :smile:
-
-
-大家还有什么好的插件推荐吗 
+[能让你开发效率翻倍的 VSCode 插件配置（上）](https://juejin.im/post/5a08d1d6f265da430f31950e)
+[能让你开发效率翻倍的 VSCode 插件配置（中）](https://juejin.im/post/5ad13d8a6fb9a028ce7c0721)
+
+时刻关注下篇~
+
+---
+
+## 用户设置备份
+
+```json
+{
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "One Monokai",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "editor.tabSize": 2,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "eslint.autoFixOnSave": true,
+  "files.autoSave": "afterDelay",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "eslint.options": {
+    "plugins": [
+      "html"
+    ]
+  },
+  "extensions.autoUpdate": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.eslintIntegration": true,
+  "files.eol": "\n",
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSaveDelay": 5000,
+  "fileheader.tpl": "/*\n * @Author: fridolph\n*  @Date: {createTime}\n * @Last Modified by: fridolph\n*  @Last Modified time: {updateTime}\n */\n",
+  "fileheader.Author": "fridolph",
+  "fileheader.LastModifiedBy": "fridolph",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.lineNumbers": "on",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+}
+```
+
+## VS code插件整理
+
+### 风格
+
+* one monokai 因为我喜欢，我放在第一了
+* vscode-icons
+* output colorizer 让log文件变得五颜六色
+
+
+### 风格检查 格式化
+
+* vetur 用vue的必装插件
+* prettier 代码格式化，这两个选一个就好
+* beautify 代码格式化你值得拥有
+* better comments 为注释增加几种风格的标注
+* editorconfig for vscode 支持 .editorconfig
+* ESlint 代码检查工具不解释了
+* html snippets
+* javascript code snippets
+
+---
+
+typescript的单独拿出来了，用都可以装
+
+* TSlint 用typescript的可以装
+* TypeScript Hero
+* Typescript Extension Pack
+* typescript importer
+* typescript react code snippets
+* typescript toolbox
+* vue typescript snippets
+
+### 代码片段
+
+* html snippets
+* snippets 自己搜啦
+* file peek 可以看到对应文件的代码片段
+* vscode-js-console-utils 为变量增加console，调试经常用
+
+### 自动补全
+
+* Auto Close Tag，适用于 JSX、Vue、HTML，在打开标签并且键入 `</` 的时候，能自动补全要闭合的标签；
+* Auto Rename Tag，适用于 JSX、Vue、HTML，在修改标签名时，能在你修改开始（结束）标签的时候修改对应的结束（开始）标签，帮你减少 50% 的击键；
+* Path Intellisense，文件路径补全，在你用任何方式引入文件系统中的路径时提供智能提示和自动完成；
+* NPM Intellisense，NPM 依赖补全，在你引入任何 node_modules 里面的依赖包时提供智能提示和自动完成；
+* IntelliSense for CSS class names，CSS 类名补全，会自动扫描整个项目里面的 CSS 类名并在你输入类名时做智能提示；
+* Emmet，以前叫做 Zen Coding，我发现后，也是爱不释手，可以把类 CSS 选择符的字符串展开成 HTML 标签，VSCode 已经内置，官方介绍文档参见，你需要做的就是熟悉他的语法，并勤加练习；
+
+### 编码效率
+
+* Document This 能够一键给代码中的类、函数加上注释，支持函数声明、函数表达式、箭头函数等
+* Embrace 快速的在选中代码两边添加各种引号、括号，不用来回移动光标
+
+|Command|Description|Notation|Suggested Key|
+|-------|-----------|--------|-------------|
+|extension.embraceParenthesis|Surround with Parenthesis|( )|ctrl+k,e|
+|extension.embraceSquareBrackets|	Surround with Square Brackets|	[ ]	|ctrl+k,s	|
+|extension.embraceCurlyBrackets|	Surround with Curly Brackets|	{ }	||ctrl+k,l	|
+|extension.embraceAngleBrackets|	Surround with Angle Brackets|	< >	|ctrl+k,a	|
+|extension.embraceSingleQuotes|	Surround with Single Quotes|	' '	|ctrl+k,q	|
+|extension.embraceDoubleQuotes|	Surround with Double Quotes|	" "	|ctrl+k,o|
+
+* Bracket Pair Colorizer 更方便看括号，作用域等
+* ECMAScript Quoets Transformer 方便在字符串和变量混搭模式（String Concat）的代码和字符串模板（Template Literals）模式间来回转换，省去手动的移动光标、修改引号等操作
+* Code Spell Checker 检查英语拼写是否合法. 选装… 一堆报错
+* Code Runner 名副其实的代码运行插件，支持数十种语言，在不离开代码编辑器的前提下通过命令面板可直接执行代码，并查看输出
+
+其他的配置：关于行末的空格、文件末尾的空行，以前需要使用插件来实现，现在直接修改 VSCode 内置配置即可实现：
+
+福利啊，不然每次eslint一堆报错
+
+```json
+{
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
+}
+```
+
+* path autocomplete 路径补全
+
+
+### 功能增强
+
+* Color Highlight，识别代码中的颜色，包括各种颜色格式；
+* Bracket Pair Colorizer，识别代码中的各种括号，并且标记上不同的颜色，方便你扫视到匹配的括号，在括号使用非常多的情况下能环节眼部压力，编辑器快捷键固然好用，但是在临近嵌套多的情况下却有些力不从心；
+* Project Manager，项目管理，让我们方便的在命令面板中切换项目文件夹，当然，你也可以直接打开包含多个项目的父级文件夹，但这样可能会让 VSCode 变慢；
+* Settings Sync 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能，配置过程有详细精确的操作步骤文档。生成的备份 Gist 默认是私密的，如果你想设置为共享的，也可以一键切换。
+* Git Lens 把 VSCode 结合 Git 的使用体验优化到了极致，能让我们在不离开编辑器，不执行任何命令的情况下知晓光标所在位置代码的修改时间、作者信息等。
+* Code Outline 能在单独窗口中列出当源代码中的各种符号，比如变量名、类名、方法名等，并支持快速跳转，有点类似于 Vim 里面的 ctags，翻看老代码、开源项目代码时非常有用。
+
+### 辅助工具
+
+* can i use 浏览器兼容性检查
+* Debugger for Chrome 允许像chrome一样在vs code里调试
+* partial diff 同名，可以查看文件间的差异
+* todo highlight 待做项高亮，且可查看统计
+* Version lens 查看package依赖，且帮更新，需要自行npm install
+* VSCode Map Preview 地图坐标信息格式文件，就可就行预览
+* vscode-fileheader 自行生成file header
