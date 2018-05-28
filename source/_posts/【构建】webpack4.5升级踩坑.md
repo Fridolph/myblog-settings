@@ -1,10 +1,10 @@
 ---
 title: 【构建】webpack4.5升级踩坑
-date: 2017-4-10 20:49:03
-tags: 
+date: 2018-4-10 20:49:03
+tags:
   - webpack
   - 填坑
-categories: 
+categories:
   - webpack
 ---
 
@@ -169,11 +169,11 @@ module.exports = {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true 
+        sourceMap: true
       }),
       new OptimizeCSSAssetsPlugin({
         // use OptimizeCSSAssetsPlugin
-      }) 
+      })
     ]
   },
   plugins: [
@@ -196,11 +196,11 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        styles: {            
+        styles: {
           name: 'styles',
           test: /\.scss|css$/,
           // 下面的设置就是将 css chunk合并为一个文件的
-          chunks: 'all',    
+          chunks: 'all',
           enforce: true
         }
       }
@@ -241,7 +241,7 @@ webpack4配置工程实例  https://github.com/taikongfeizhu/react-mobx-react-ro
 ---
 
 重点参考资料
- 
+
 webpack4 https://blog.csdn.net/qq_20334295/article/details/79401231
 
 webpack4发布概览 https://zhuanlan.zhihu.com/p/34028750

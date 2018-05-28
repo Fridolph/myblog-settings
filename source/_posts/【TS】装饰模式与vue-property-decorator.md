@@ -1,10 +1,10 @@
 ---
-title: 【TS】装饰模式|vue集成之vue-property-decorator
+title: 【TS】装饰器模式与vue-property-decorator
 date: 2018-4-26 22:29:03
-tags: 
+tags:
   - js
   - ts
-categories: 
+categories:
   - js
   - ts
 ---
@@ -171,7 +171,7 @@ class Man {
   @decorateLight
   init(def, atk, hp) {
     this.def = def
-    this.atk = atk 
+    this.atk = atk
     this.hp = hp
   }
   // 省略
