@@ -1,20 +1,19 @@
 ---
-title: 【JS】变量声明与赋值（一）引用与值传递
-date: 2017-12-02 12:40:00
-tags: 
+title: 【FEStar】(二)变量声明与赋值，引用、值传递与对象拷贝
+date: 2018-06-23 20:41:02
+tags:
   - js
   - es6
   - 引用
-  - 转载
-categories: 
+categories:
   - js
 ---
 
-> ES6 变量声明与赋值：值传递、浅拷贝与深拷贝详解转载于王下邀月熊\_Chevalier 的 现代 JavaScript 开发：语法基础与实践技巧 系列文章。
+> 夯实基础系列。虽然想整理之前测试相关的东西，不过最近看书有讲到这个，遂将之前收藏的博客、文章结合书里的讲解做了一些整理和例子来加深这块的印象。（今天也才把测试的看了没来得及整理）
 
 <!-- more -->
 
-ES6 为我们引入了 let 与 const 两种新的变量声明关键字，同时也引入了块作用域；本文首先介绍 ES6 中常用的三种变量声明方式，然后讨论了 JavaScript 按值传递的特性以及多种的赋值方式，最后介绍了复合类型拷贝的技巧
+ES6 为我们引入了 `let` 与 `const` 两种新的变量声明关键字，同时也引入了块作用域；本文首先介绍 ES6 中常用的三种变量声明方式，然后讨论了 JavaScript 按值传递的特性以及多种的赋值方式，最后介绍了复合类型拷贝的技巧
 
 ## 变量声明
 
@@ -176,7 +175,7 @@ arr[0] = 0
 console.log(arr[0]) // print -1
 # Example 6
 const me = Object.freeze({
-  name: 'Jacopo', 
+  name: 'Jacopo',
   pet: {
     type: 'dog',
     name: 'Spock'
@@ -222,11 +221,11 @@ JavaScript 中是支持变量的连续赋值，即譬如：
 为了解释上述问题，我们引入一个新的变量:
 
 ```js
-var a = {n:1};  
-var b = a; // 持有a，以回查  
-a.x = a = {n:2};  
-alert(a.x);// --> undefined  
-alert(b.x);// --> [object Object] 
+var a = {n:1};
+var b = a; // 持有a，以回查
+a.x = a = {n:2};
+alert(a.x);// --> undefined
+alert(b.x);// --> [object Object]
 ```
 
 实际上在连续赋值中，值是直接赋予给变量指向的内存地址：
@@ -292,8 +291,8 @@ var a, b;
 var a, b;
 ({ a, b } = {a: 1, b: 2});
 console.log(a, b);// => 1 2
-// This due to the grammar in JS. 
-// Starting with { implies a block scope, not an object literal. 
+// This due to the grammar in JS.
+// Starting with { implies a block scope, not an object literal.
 // () converts to an expression.
 // From Harmony Wiki:
 // Note that object literals cannot appear in
@@ -520,18 +519,18 @@ jQuery.ajax = function (url, {
 
 es6新增的特性
 
-### Rest Operator 
+### Rest Operator
 
 在 JavaScript 函数调用时我们往往会使用内置的 arguments 对象来获取函数的调用参数，不过这种方式却存在着很多的不方便性。譬如 arguments 对象是 Array-Like 对象，无法直接运用数组的 .map() 或者 .forEach() 函数；并且因为 arguments 是绑定于当前函数作用域，如果我们希望在嵌套函数里使用外层函数的 arguments 对象，我们还需要创建中间变量。
 
 ```js
-function outerFunction() {  
+function outerFunction() {
   // store arguments into a separated variable
   var argsOuter = arguments;
   function innerFunction() {
     // args is an array-like object
     var even = Array.prototype.map.call(argsOuter, function(item) {
-      // do something with argsOuter               
+      // do something with argsOuter
     });
   }
 }
@@ -540,24 +539,24 @@ function outerFunction() {
 ES6 中为我们提供了 Rest Operator 来以数组形式获取函数的调用参数，Rest Operator 也可以用于在解构赋值中以数组方式获取剩余的变量：
 
 ```js
-function countArguments(...args) {  
+function countArguments(...args) {
   return args.length;
 }
 // get the number of arguments
-countArguments('welcome', 'to', 'Earth'); // => 3  
+countArguments('welcome', 'to', 'Earth'); // => 3
 // destructure an array
-let otherSeasons, autumn;  
+let otherSeasons, autumn;
 [autumn, ...otherSeasons] = cold;
-otherSeasons  // => ['winter']  
+otherSeasons  // => ['winter']
 ```
 
 典型的 Rest Operator 的应用场景譬如进行不定数组的指定类型过滤：
 
-    function filter(type, ...items) {  
+    function filter(type, ...items) {
       return items.filter(item => typeof item === type);
     }
-    filter('boolean', true, 0, false);        // => [true, false]  
-    filter('number', false, 4, 'Welcome', 7); // => [4, 7] 
+    filter('boolean', true, 0, false);        // => [true, false]
+    filter('number', false, 4, 'Welcome', 7); // => [4, 7]
 
 尽管 Arrow Function 中并没有定义 arguments 对象，但是我们仍然可以使用 Rest Operator 来获取 Arrow Function 的调用参数：
 
@@ -577,30 +576,30 @@ otherSeasons  // => ['winter']
 Spread Operator 则与 Rest Opeator 的功能正好相反，其常用于进行数组构建与解构赋值，也可以用于将某个数组转化为函数的参数列表，其基本使用方式如下：
 
 ```js
-let cold = ['autumn', 'winter'];  
-let warm = ['spring', 'summer'];  
+let cold = ['autumn', 'winter'];
+let warm = ['spring', 'summer'];
 // construct an array
 [...cold, ...warm] // => ['autumn', 'winter', 'spring', 'summer']
 // function arguments from an array
-cold.push(...warm);  
-cold // => ['autumn', 'winter', 'spring', 'summer']  
+cold.push(...warm);
+cold // => ['autumn', 'winter', 'spring', 'summer']
 ```
 
 我们也可以使用 Spread Operator 来简化函数调用：
 
 ```js
-class King {  
+class King {
   constructor(name, country) {
     this.name = name;
-    this.country = country;     
+    this.country = country;
   }
   getDescription() {
     return `${this.name} leads ${this.country}`;
   }
 }
-var details = ['Alexander the Great', 'Greece'];  
-var Alexander = new King(...details);  
-Alexander.getDescription(); // => 'Alexander the Great leads Greece'  
+var details = ['Alexander the Great', 'Greece'];
+var Alexander = new King(...details);
+Alexander.getDescription(); // => 'Alexander the Great leads Greece'
 ```
 
 还有另外一个好处就是可以用来替换 Object.assign 来方便地从旧有的对象中创建新的对象，并且能够修改部分值；譬如：
@@ -617,7 +616,7 @@ var obj_new_2 = {
 最后我们还需要讨论下 Spread Operator 与 Iteration Protocols，实际上 Spread Operator 也是使用的 Iteration Protocols 来进行元素遍历与结果搜集；因此我们也可以通过自定义 Iterator 的方式来控制 Spread Operator 的表现。Iterable 协议规定了对象必须包含 Symbol.iterator 方法，该方法返回某个 Iterator 对象：
 
 ```js
-interface Iterable {  
+interface Iterable {
   [Symbol.iterator]() {
     //...
     return Iterator;
@@ -628,7 +627,7 @@ interface Iterable {
 该 Iterator 对象从属于 Iterator Protocol，其需要提供 next 成员方法，该方法会返回某个包含 done 与 value 属性的对象：
 
 ```js
-interface Iterator {  
+interface Iterator {
   next() {
      //...
      return {
@@ -642,19 +641,19 @@ interface Iterator {
 典型的 Iterable 对象就是字符串：
 
 ```js
-var str = 'hi';  
-var iterator = str[Symbol.iterator]();  
-iterator.toString(); // => '[object String Iterator]'  
-iterator.next();     // => { value: 'h', done: false }  
-iterator.next();     // => { value: 'i', done: false }  
-iterator.next();     // => { value: undefined, done: true }  
+var str = 'hi';
+var iterator = str[Symbol.iterator]();
+iterator.toString(); // => '[object String Iterator]'
+iterator.next();     // => { value: 'h', done: false }
+iterator.next();     // => { value: 'i', done: false }
+iterator.next();     // => { value: undefined, done: true }
 [...str];            // => ['h', 'i']
 ```
 
 我们可以通过自定义 array-like 对象的 Symbol.iterator 属性来控制其在迭代器上的效果：
 
 ```js
-function iterator() {  
+function iterator() {
   var index = 0;
   return {
     next: () => ({ // Conform to Iterator protocol
@@ -663,15 +662,271 @@ function iterator() {
     })
   };
 }
-var arrayLike = {  
+var arrayLike = {
   0: 'Cat',
   1: 'Bird',
   length: 2
 };
 // Conform to Iterable Protocol
-arrayLike[Symbol.iterator] = iterator;  
-var array = [...arrayLike];  
-console.log(array); // => ['Cat', 'Bird']  
+arrayLike[Symbol.iterator] = iterator;
+var array = [...arrayLike];
+console.log(array); // => ['Cat', 'Bird']
 ```
 
 arrayLike[Symbol.iterator] 为该对象创建了值为某个迭代器的属性，从而使该对象符合了 Iterable 协议；而 iterator() 又返回了包含 next 成员方法的对象，使得该对象最终具有和数组相似的行为表现。
+
+## Copy Composite Data Types: 复合类型的拷贝
+
+### Shallow Copy 浅拷贝
+
+浅拷贝是指复制时，指对第一层键值对进行独立的赋值，一个简单的实现如下：
+
+```js
+function shallowCopy(target, source) {
+  if (!source || typeof source !== 'object') return
+  // 这个方法有点问题，target一定要事先定好，不然就不能改变实参了
+  // 具体原因解释可看参考资料中 JS是值传递还是引用传递
+  if (!target || typeof target !== 'object') return
+
+  // 这边最好区别一下对象和数组的复制
+  for (var key in source) {
+    if (source.hasOwnProperty(key)) {
+      target[key] = source[key]
+    }
+  }
+}
+```
+
+### Object.assign
+
+Object.assign() 方法可以把任意多个源对象所拥有的自身可枚举属性拷贝给目标对象，然后返回目标对象。
+Object.assign 方法只会拷贝 源对象自身的并且可枚举的属性 到目标对象身上。注意，对于访问器属性，该方法会执行那个访问器属性的 getter 函数，然后把得到的值拷贝给目标对象如果你想拷贝访问器属性本身，请使用 `Object.getOwnPropertyDescriptor` 和 `Object.difineProperties()`方法
+
+注意，字符串类型和 symbol 类型的属性都会被拷贝。
+
+注意，在属性拷贝过程中可能会产生异常，比如目标对象的某个只读属性和源对象的某个属性同名，这时该方法会抛出一个 TypeError 异常，拷贝过程中断，已经拷贝成功的属性不会受到影响，还未拷贝的属性将不会再被拷贝。
+
+注意， Object.assign 会跳过那些值为 null 或 undefined 的源对象。
+
+    Object.assign(target, ...sources)
+
+浅拷贝一个对象
+
+    var obj = {a: 1}
+    var copy = Object.assign({}, obj)
+    console.log(copy) // {a:1}
+
+合并若干个对象
+
+```js
+var o1 = { a: 1 }
+var o2 = { b: 2 }
+var o3 = { c: 3 }
+var obj = Object.assign(o1, o2, o3)
+console.log(obj) // { a: 1, b: 2, c: 3 }
+console.log(o1) // { a: 1, b: 2, c: 3 }, 注意目标对象自身也会改变。
+```
+
+拷贝 symbol 类型的属性
+
+```js
+var o1 = { a: 1 }
+var o2 = { [Symbol('foo')]: 2 }
+var obj = Object.assign({}, o1, o2)
+console.log(obj) // { a: 1, [Symbol("foo")]: 2 }
+```
+
+继承属性和不可枚举属性是不能拷贝的
+
+```js
+var obj = Object.create(
+  { foo: 1 },
+  {
+    // foo是个继承属性
+    bar: { value: 2 }, // bar是个不可枚举属性
+    baz: {
+      value: 3,
+      enumerable: true // baz是个自身可枚举属性
+    }
+  }
+)
+var copy = Object.assign({}, obj)
+console.log(copy) // {baz: 3}
+```
+
+原始值会被隐式转换成其包装对象
+
+```js
+var v1 = '123'
+var v2 = true
+var v3 = 10
+var v4 = Symbol('foo')
+
+var obj = Object.assign({}, v1, null, v2, undefined, v3, v4)
+// 源对象如果是原始值，会被自动转换成它们的包装对象，
+// 而 null 和 undefined 这两种原始值会被完全忽略。
+// 注意，只有字符串的包装对象才有可能有自身可枚举属性。
+console.log(obj) // { "0": "1", "1": "2", "2": "3" }
+```
+
+例子：拷贝属性过程中发生异常
+
+```js
+var target = Object.defineProperty({}, 'foo', {
+  value: 1,
+  writeable: false
+}) // target 的 foo 属性是个只读属性。
+Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 })
+// TypeError: "foo" is read-only
+// 注意这个异常是在拷贝第二个源对象的第二个属性时发生的。
+console.log(target.bar) // 2，说明第一个源对象拷贝成功了。
+console.log(target.foo2) // 3，说明第二个源对象的第一个属性也拷贝成功了。
+console.log(target.foo) // 1，只读属性不能被覆盖，所以第二个源对象的第二个属性拷贝失败了。
+console.log(target.foo3) // undefined，异常之后 assign 方法就退出了，第三个属性是不会被拷贝到的。
+console.log(target.baz) // undefined，第三个源对象更是不会被拷贝到的。
+```
+
+### 使用 [].concat 来复制数组
+
+同样类似于对于对象的复制，我们建议使用[].concat 来进行数组的深复制:
+
+    ar list = [1, 2, 3];
+    var changedList = [].concat(list);
+    changedList[1] = 2;
+    list === changedList; // false
+
+同样的，concat 方法也只能保证一层深复制:
+
+    > list = [[1,2,3]]
+    [ [ 1, 2, 3 ] ]
+    > new_list = [].concat(list)
+    [ [ 1, 2, 3 ] ]
+    > new_list[0][0] = 4
+    4
+    > list
+    [ [ 4, 2, 3 ] ]
+
+### 浅拷贝的缺陷
+
+不过需要注意的是，assign 是浅拷贝，或者说，它是一级深拷贝，举两个例子说明：
+
+```js
+const defaultOpt = {
+  title: {
+    text: 'hello world',
+    subtext: "It's my world"
+  }
+}
+const opt = Object.assign({}, defaultOpt, {
+  title: {
+    subtext: 'Yes, your world'
+  }
+})
+console.log(opt) // { title: { subtext: 'Yes, your world.' } }
+```
+
+上面这个例子中，对于对象的一级子元素而言，只会替换引用，而不会动态的添加内容。那么，其实 assign 并没有解决对象的引用混乱问题，参考下下面这个例子：
+
+```js
+const defaultOpt = {
+  title: {
+    text: 'hello world',
+    subtext: "It's my world."
+  }
+}
+const opt1 = Object.assign({}, defaultOpt);
+const opt2 = Object.assign({}, defaultOpt);
+opt2.title.subtext = 'Yes, your world.';
+console.log(opt1); // { title: { text: 'hello world', subtext: 'Yes, your world.' } }
+console.log(opt2); // { title: { text: 'hello world', subtext: 'Yes, your world.' } }
+```
+
+### DeepCopy: 深拷贝
+
+**递归属性遍历**
+
+一般来说，在JavaScript中考虑复合类型的深层复制的时候，往往就是指对于Date、Object与Array这三个复合类型的处理。我们能想到的最常用的方法就是先创建一个空的新对象，然后递归遍历旧对象，直到发现基础类型的子节点才赋予到新对象对应的位置。不过这种方法会存在一个问题，就是JavaScript中存在着神奇的原型机制，并且这个原型会在遍历的时候出现，然后原型不应该被赋予给新对象。那么在遍历的过程中，我们应该考虑使用hasOenProperty方法来过滤掉那些继承自原型链上的属性:
+
+```js
+function clone(obj) {
+  var copy
+  // 处理基本类型 null undefined
+  if (null === obj || 'object' !== typeof obj) return obj
+  // 若为 Date 对象时
+  if (obj instanceof Date) {
+    copy = new Date()
+    copy.setTime(obj.getTime())
+    return copy
+  }
+  // 处理数组
+  if (obj instanceof Array) {
+    copy = []
+    for (var i = 0, len = obj.length; i < len; i++) {
+      copy[i] = clone(obj[i])
+    }
+    return copy
+  }
+  // 处理对象
+  if (obj instanceof Object) {
+    copy = {}
+    for (var attr in obj) {
+      if (obj.hasOwnProperty(attr)) {
+        copy[attr] = clone(obj[arr])
+      }
+    }
+    return copy
+  }
+  throw new Error('Unable to copy obj! Its type isn\'t supported!')
+}
+```
+
+调用如下：
+
+```js
+// This would be cloneable:
+var tree = {
+    "left"  : { "left" : null, "right" : null, "data" : 3 },
+    "right" : null,
+    "data"  : 8
+};
+// This would kind-of work, but you would get 2 copies of the
+// inner node instead of 2 references to the same copy
+var directedAcylicGraph = {
+    "left"  : { "left" : null, "right" : null, "data" : 3 },
+    "data"  : 8
+};
+directedAcyclicGraph["right"] = directedAcyclicGraph["left"];
+// Cloning this would cause a stack overflow due to infinite recursion:
+var cylicGraph = {
+    "left"  : { "left" : null, "right" : null, "data" : 3 },
+    "data"  : 8
+};
+cylicGraph["right"] = cylicGraph;
+```
+
+### 利用JSON深拷贝
+
+    JSON.parse(JSON.stringify(obj))
+
+对于一般的需求是可以满足的，但是它有缺点，下例中，可以看到JSON赋值会忽略掉值为undefined以及函数表达式
+
+```js
+var obj = {
+  a: 1,
+  b: 2,
+  c: undefined,
+  sum: function() {
+    return a + b
+  }
+}
+var obj2 = JSON.parse(JSON.stringify(obj))
+console.log(obj2) // Object {a: 1, b: 2}
+```
+
+---
+
+### 参考资料
+
+[基于 JSX 的动态数据绑定](https://zhuanlan.zhihu.com/p/28313321)
+[ECMAScript 2017（ES8）特性概述](https://zhuanlan.zhihu.com/p/27844393)
+[WebAssembly 初体验：从零开始重构计算模块](https://zhuanlan.zhihu.com/p/27410280)
