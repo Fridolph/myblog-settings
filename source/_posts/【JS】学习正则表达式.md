@@ -1,16 +1,18 @@
 ---
 title: 【JS】学习正则表达式
-date: 2017-09-28 17:49:03
-tags: 
+date: 2018-06-29 17:49:03
+tags:
   - js
   - 正则表达式
-categories: 
+categories:
   - js
 ---
 
 > 最近因工作用到了，顺便查看了一些关于正则的博客，确实非常使用。学好正则看来是以后的一个必选项，趁着最近时间挺充裕的，于是系统的入门了一下，也算是能手写几个简单的正则来匹配规则了。
 
 <!-- more -->
+
+![学习正则表达式](http://blog.fueson.top/18-6-28/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.png?imageView2/0/interlace/1/q/70|watermark/2/text/ZnJpZG9scGg=/font/5a6L5L2T/fontsize/240/fill/IzAwMDAwMA==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim)
 
 ### 子字符串匹配和替换
 
@@ -413,5 +415,5 @@ text.match(userRegexp)
 这一篇已经涉及了正则表达式中的主要知识点，但对于正则中包含的技术、例子和其固有的复杂性，也只是浅尝辄止。想要深入学习正则表达式，需要更多的练习与理解，那么以后在工作与学习中多多运用进去吧。
 
 function() {
-  
+
 }
