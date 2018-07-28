@@ -9,6 +9,10 @@ categories:
   - web
 ---
 
+![](http://blog.fueson.top/18-7-28/63404154.jpg)
+
+<!-- more -->
+
 ## Cookie定义
 
 Cookie 是一小段文本信息，伴随着用户请求和页面在 Web 服务器和浏览器之间传递。Cookie 包含每次用户访问站点时 Web 应用程序都可以读取的信息。
