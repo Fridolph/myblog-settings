@@ -1,18 +1,25 @@
-# html lang
+--- # ---------------
+# Theme color for customize
+# Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
-language:
+# theme_color:
+#   enable: true
+#   main: "#49B1F5"
+#   paginator: "#00C4B6"
+#   button_hover: "#FF7242"
+#   text_selection: "#00C4B6"
+#   link_color: "#858585"
+#   hr_color: "#A4D8FA"
+#   tag_start_color: "#A4D8FA"
+#   tag_end_color: "#1B9EF3"
 
 # Main menu navigation
-# ---------------
 menu:
   个人主页: /
   文章总览: /archives
   图书推荐: /books
   项目实战: /demo
   个人相册: /gallery
-
-  # Tags: /tags
-  # Categories: /categories
   #XXX: /xxx
 
 # Favicon
@@ -20,24 +27,34 @@ menu:
 favicon: /favicon.ico
 
 # PWA
+# See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
   enable: false
-  manifest:
-
+  manifest: /manifest.json
+  # If you don't want to trouble, just ignore the following things
+  # See https://realfavicongenerator.net/
+  # theme_color: "#49B1F5"
+  # apple_touch_icon: /apple-touch-icon.png
+  # favicon_32_32: /favicon-32x32.png
+  # favicon_16_16: /favicon-16x16.png
+  # mask_icon: /safari-pinned-tab.svg
 
 # Highlight theme
 # ---------------
 highlight_theme: default
 
+# code_word_wrap: true or false
+
 # Nav settings
+# see the icon_name in fontawesome website.
+# And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
 social:
   #icon_name: url
   email: yinlinshengxiao@gmail.com
   github: https://github.com/Fridolph
   rss: /atom.xml
-
 
 # Algolia search
 # ---------------
@@ -48,9 +65,10 @@ algolia_search:
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    hits_stats: '${hits} results found in ${time} ms'
 
 # Local search
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=local-search
 # ---------------
 local_search:
   enable: true
@@ -59,11 +77,18 @@ local_search:
     hits_empty: "We didn't find any results for the search: ${query}"
 
 # MathJax
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=mathjax
 # ---------------
 mathjax:
   enable: false
-  cdn: https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
+# KaTeX
+# ---------------
+katex:
+  enable: false
+  cdn:
+    css: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
 
 # Toggle fireworks (IE >= 10)
 # ---------------
@@ -75,34 +100,37 @@ baidu_analytics: https://hm.baidu.com/hm.js?66f25c24596db799ce091d9b434b9495
 
 google_analytics:
 
+# Tencent_analytics ID
+tencent_analytics:
+
 # stylesheets loaded in the <head>
 # ---------------
 stylesheets:
-- /css/index.css
-
-# scripts loaded in the end of the body
-# ---------------
+  - /css/index.css
+  # scripts loaded in the end of the body
+  # ---------------
 scripts:
-- /js/utils.js
-- /js/fancybox.js
-- /js/sidebar.js
-- /js/copy.js
-- /js/fireworks.js
-- /js/transition.js
-- /js/scroll.js
-- /js/head.js
+  - /js/utils.js
+  - /js/fancybox.js
+  - /js/sidebar.js
+  - /js/copy.js
+  - /js/fireworks.js
+  - /js/transition.js
+  - /js/scroll.js
+  - /js/head.js
 
-# cdn for third-party library
-# ---------------
+  # cdn for third-party library
+  # ---------------
 cdn:
   css:
-    fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
+    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    # fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
   js:
-    anime: /js/third-party/anime.min.js
-    jquery: /js/third-party/jquery.min.js
-    fancybox: /js/third-party/jquery.fancybox.min.js
-    velocity: /js/third-party/velocity.min.js
-    velocity-ui: /js/third-party/velocity.ui.min.js
+    anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
+    jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
+    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
+    velocity: https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js
+    velocity-ui: https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js
 
 # Post info settings
 # ---------------
@@ -115,22 +143,25 @@ post_meta:
   categories: true
   tags: true
 
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/additional-package-support?id=word-counting
 wordcount:
   enable: true
 
 toc:
   enable: true
-
-heart:
-  enable: true
-  href: https://github.com/fridolph
-  text: 感谢访问本站，若喜欢请star ^_^
+  # number: true
 
 post_copyright:
   enable: true
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+heart:
+  enable: true
+  href: https://github.com/fridolph
+  text: 感谢访问本站，若喜欢请star ^_^
+
+# Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/theme-config?id=auto-excerpt
 # auto_excerpt:
 #   enable: false
 #   length: 150
@@ -152,13 +183,13 @@ slide:
   parallaxBackgroundVertical: null
 
 # QR_code:
-  # - itemlist:
-  #     img:
-  #     text:
+# - itemlist:
+#     img:
+#     text:
 
 # adv:
-  # enable: false
-  # info:
+# enable: false
+# info:
 
 # Share System
 # ---------------
@@ -167,8 +198,8 @@ addThis:
   #pubid:
 
 # sharejs:
-  # enable: false
-  # disabled_sites:
+# enable: false
+# disabled_sites:
 
 # Comments System
 # ---------------
@@ -178,15 +209,15 @@ disqus:
   count: true
 
 # laibili:
-  # enable: false
-  # uid:
+# enable: false
+# uid:
 
 # gitment
-  # enable: false
-  # owner:
-  # repo:
-  # client_id:
-  # client_secret:
+# enable: false
+# owner:
+# repo:
+# client_id:
+# client_secret:
 
 # gitalk:
 #   enable: false
@@ -195,6 +226,9 @@ disqus:
 #   repo:
 #   owner:
 #   admin:
+####   Using this js for redirect to gitalk container after login
+####   See https://github.com/gitalk/gitalk/issues/125
+#   js: https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js
 
 # valine comment system. https://valine.js.org
 # valine:
@@ -212,6 +246,8 @@ disqus:
 # Footer Settings
 # ---------------
 since: 2016
+
+# footer_custom_text:
 
 ICP:
   enable: false
@@ -234,9 +270,23 @@ busuanzi:
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
-
 # Sidebar Settings
 # ---------------
 #links_title: Links
 #links:
-  #Name: url
+#Name: url
+
+# Follow Me Button
+# follow:
+#   enable: true
+#   url: ''
+#   text: ''
+
+# Ads
+# ---------------
+# Google Adsense
+google_adsense:
+  enable: false
+  js: //pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client: ca-pub-...........
+  enable_page_level_ads: true

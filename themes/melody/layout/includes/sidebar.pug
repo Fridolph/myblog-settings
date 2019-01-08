@@ -1,5 +1,11 @@
 #sidebar
-  - var showToc = is_post() && theme.toc.enable
+  - const showToc = is_post() && theme.toc.enable
+  -
+    let tocNumber
+    if (page.toc_number !== undefined) tocNumber = page.toc_number
+    else if (theme.toc.number !== undefined) tocNumber = theme.toc.number
+    else tocNumber = true
+  -
   if(showToc)
     .toggle-sidebar-info.text-center
       span(data-toggle= _p('sidebar.toggle_article'))= _p('sidebar.toggle_site')
@@ -11,7 +17,7 @@
         span.progress-num 0
         span.progress-percentage %
         div.sidebar-toc__progress-bar
-      div.sidebar-toc__content!=toc(page.content)
+      div.sidebar-toc__content!=toc(page.content, {list_number: tocNumber})
   .author-info(class= showToc ? 'hide' : undefined)
     .author-info__avatar.text-center
       img(src=theme.avatar || url_for('/img/avatar.png'))
@@ -19,7 +25,7 @@
     .author-info__description.text-center= config.description
     if theme.follow && theme.follow.enable
       .follow-button
-        a(href=theme.follow.url target="_blank")= theme.follow.text || 'Follow Me'
+        a(href=theme.follow.url)= theme.follow.text || 'Follow Me'
     hr
     .author-info-articles
       if site.posts.length
@@ -39,20 +45,20 @@
       .author-info-links
         .author-info-links__title.text-center= theme.links_title
         each url, name in theme.links
-          a.author-info-links__name.text-center(href=url target="_blank")= name
+          a.author-info-links__name.text-center(href=url)= name
 
-  - var showHeart = theme.heart.enable
-  if (showHeart)
-    .unit
-      .heart
-        .heart-piece-0
-        .heart-piece-1
-        .heart-piece-2
-        .heart-piece-3
-        .heart-piece-4
-        .heart-piece-5
-        .heart-piece-6
-        .heart-piece-7
-        .heart-piece-8
-      p.anime-title
-        a(href=theme.heart.href target="_blank")= theme.heart.text || '感谢您对melody的支持，欢迎star'
+    - var showHeart = theme.heart.enable
+    if (showHeart)
+      .unit
+        .heart
+          .heart-piece-0
+          .heart-piece-1
+          .heart-piece-2
+          .heart-piece-3
+          .heart-piece-4
+          .heart-piece-5
+          .heart-piece-6
+          .heart-piece-7
+          .heart-piece-8
+        p.anime-title
+          a(href=theme.heart.href target="_blank")= theme.heart.text || '感谢您对melody的支持，欢迎star'

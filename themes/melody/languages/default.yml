@@ -1,35 +1,49 @@
 sidebar:
-  articles: 文章
-  tags: 标签
-  categories: 分类
-  toggle_site: 切换站点概览
-  toggle_article: 切换文章详情
-  catalog: 目录
-  have_read: 你已经读了
+  articles: Articles
+  tags: Tags
+  categories: Categories
+  toggle_site: Toggle site
+  toggle_article: Toggle article
+  catalog: Catalog
+  have_read: You've read
 
 footer:
-  driven: driven
-  theme: theme
+  driven: Driven
+  theme: Theme
 
 copy:
-  success: 复制成功
-  error: 复制错误
-  noSupport: 浏览器不支持
+  success: Copy successfully
+  error: Copy error
+  noSupport: The browser does not support
 
 page:
-  articles: 文章总览
-  tag: 标签
-  category: 分类
+  articles: Articles
+  tag: Tag
+  category: Category
+  archives: Archives
 
-no_title: 无题
-read_more: 阅读更多
+sticky: Sticky
+no_title: No title
+read_more: Read more
 
 post:
-  wordcount: 字数总计
-  min2read: '阅读时长: %s 分钟'
+  wordcount: Word count
+  min2read: 'Reading time: %s min'
   copyright:
-    author: 文章作者
-    link: 文章链接
-    copyright_notice: 版权声明
-    copyright_content: '本博客所有文章除特别声明外，均采用
-      <a href="%s" target="_blank">%s</a> 许可协议。转载请注明来自 <a href="%s" target="_blank">%s</a>！'
+    author: Author
+    link: Link
+    copyright_notice: Copyright Notice
+    copyright_content: 'All articles in this blog are licensed under <a href="%s">%s</a> unless stating additionally.'
+
+
+search: Search
+algolia_search:
+  input_placeholder: Search for Posts
+  hits_empty: "We didn't find any results for the search: ${query}."
+  hits_stats: "${hits} results found in ${time} ms"
+
+local_search:
+  label: Local search
+  input_placeholder: Search for Posts
+  hits_empty: "We didn't find any results for the search: ${query}"
+  powered_by: Powered by
