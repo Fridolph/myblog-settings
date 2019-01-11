@@ -47,7 +47,7 @@ html(lang=config.language)
           div!= body
         else
           block content
-    footer
+    footer(style='min-height: 360px;background: url(' + theme.footer_img + ') no-repeat center top; background-size: cover;')
       include ./footer.pug
     i.fa.fa-arrow-up#go-up(aria-hidden="true")
     each item in theme.cdn.js

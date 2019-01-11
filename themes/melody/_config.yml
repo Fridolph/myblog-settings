@@ -136,7 +136,8 @@ cdn:
 # ---------------
 avatar: http://blog.fueson.top/avatar/me.jpg?imageMogr2/thumbnail/200x200>/gravity/Center/crop/200x200/format/jpg/blur/1x0/quality/75|imageslim
 
-top_img: http://blog.fueson.top/bg/saber.jpg
+top_img: http://blog.fueson.top/bg/shiro.jpg
+footer_img: http://blog.fueson.top/bg/footer_saber.jpg
 
 post_meta:
   date_type: created # created or updated
